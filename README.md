@@ -38,7 +38,7 @@ Sit back as the scraper collects the latest job listings from HH.ru.
 Explore the interactive dashboard to visualize the collected data.
 Export the curated data to Excel for further analysis.
 
-## Screenshots 📸
+## Screenshot 📸
 
 <img src="https://github.com/Balalaika1/hh_scraper_dashboard/blob/main/work_gif.gif" width=500 href="none"></img>
 
