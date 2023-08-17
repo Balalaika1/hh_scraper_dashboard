@@ -9,10 +9,7 @@ citys_list = {"Москва":1,
 "Новосибирск":4,
 "Ростов-на-Дону":76}
 
-#df = pd.DataFrame()
-#------------------------------------Убрать
-df = pd.read_excel('main3.xlsx')
-#------------------------------------Убрать
+df = pd.DataFrame()
 
 with st.sidebar:
     st.markdown(
