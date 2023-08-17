@@ -30,12 +30,15 @@ Scrape job listings from HH.ru and visualize them in a sleek, interactive dashbo
    ```bash
    python main.py
 
-**Usage** 📝
+## Usage 📝
+
 Launch the program and specify your job search criteria.
 Sit back as the scraper collects the latest job listings from HH.ru.
 Explore the interactive dashboard to visualize the collected data.
 Export the curated data to Excel for further analysis.
-**Screenshots** 📸
+
+## Screenshots 📸
+
 Dashboard
 Excel Export
 
