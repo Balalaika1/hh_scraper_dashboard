@@ -3,7 +3,7 @@
 # HH Scraper & Visualizer 🕵️‍♂️📊
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-0.89.0-blue)
 
 Scrape job listings from HH.ru and visualize them in a sleek, interactive dashboard. Export the curated data to Excel for further exploration.
 
@@ -30,16 +30,12 @@ Scrape job listings from HH.ru and visualize them in a sleek, interactive dashbo
    ```bash
    python main.py
 
-Usage 📝
+**Usage** 📝
 Launch the program and specify your job search criteria.
 Sit back as the scraper collects the latest job listings from HH.ru.
 Explore the interactive dashboard to visualize the collected data.
 Export the curated data to Excel for further analysis.
-Screenshots 📸
+**Screenshots** 📸
 Dashboard
 Excel Export
 
-License 📜
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Unleash the power of data insights with HH Scraper & Visualizer. Dive into the job market trends and make informed decisions with ease! 💼📈
