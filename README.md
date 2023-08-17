@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-0.89.0-blue)
 
-**Hello, Quantum Dreamer!**👋
+###Hello, Quantum Dreamer!👋
 
 Scrape job listings from HH.ru and visualize them in a sleek, interactive dashboard. Export the curated data to Excel for further exploration.
 
