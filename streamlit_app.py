@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from defs import hh_to_df, list_columns_dicts, spliting_columns, map_f, number_of_vacancies
+from defs import hh_to_df, list_columns_dicts, spliting_columns, map_f, number_of_vacancies, average_value_salary_from_to
 import plotly.express as px
 
 citys_list = {"Москва":1,
