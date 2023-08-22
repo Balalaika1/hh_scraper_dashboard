@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 import plotly.express as px
 import json
+import streamlit as st
 
 
 def hh_to_df(text, area, period):
@@ -94,6 +95,7 @@ def spliting_columns(name_lists_list, df2):
     # Возвращаем DataFrame с разделенными столбцами
     return df2
 
+@st.cache_data
 def map_f(df1):
     df = df1
     df = df.dropna(subset=['salary_from'])
