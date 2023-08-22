@@ -28,22 +28,32 @@ with st.sidebar:
         key="visibility",
         options=citys_list.keys(),
     )
+    st.markdown("---")
+    period = st.slider('The number of days within which the vacancy is published on the site 📆', 1, 100, 1)
     value_area = citys_list[radio_widget]
     if st.button('Refresh'):
-        df = hh_to_df(title, value_area)
+        df = hh_to_df(title, value_area, period)
         df = spliting_columns(list_columns_dicts(df), df)
         df = spliting_columns(list_columns_dicts(df), df)
-        #df.to_excel('main3.xlsx')
+        df.to_excel('main3.xlsx')
 if df.empty == False:
     a = number_of_vacancies(df)
+    b = average_value_salary_from_to(df)
     c1, c2, c3 = st.columns(3)
     c1.metric("Vacancies found", a[0])
-    c2.metric("Vacancies where salary not specified", a[1])
+    c2.metric("Vacancies where salary specified", a[1])
+    c3.metric("Vacancies", b)
 
     fig = map_f(df)
     st.plotly_chart(fig, use_container_width=True)
 
     st.dataframe(df)
+    with open("main3.xlsx", "rb") as file:
+        btn = st.download_button(
+                label="Download excel file",
+                data=file,
+                file_name="main.xlsx"
+              )
 else:
     st.markdown('<h3>Select the data and click the refresh button 😉</h3>',unsafe_allow_html=True)
-
+    st.spinner('Wait for it...')
