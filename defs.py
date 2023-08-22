@@ -4,7 +4,7 @@ import plotly.express as px
 import json
 
 
-def hh_to_df(text, area):
+def hh_to_df(text, area, period):
     df_main = pd.DataFrame()
     frames = []
     for i in range(0, 21):
@@ -13,7 +13,8 @@ def hh_to_df(text, area):
         params = {'page': i,
                   'per_page':100,
                   'text':f'!{text}', # Если необходимо найти слово или словосочетание именно в той форме, которая указана в поисковом запросе, поставьте перед ним восклицательный знак. (https://hh.ru/article/1175)
-                  'area': area}
+                  'area': area,
+                  'period':period}
 
         html = requests.get(url, params = params)
         if html.status_code == 200:
@@ -103,7 +104,14 @@ def map_f(df1):
 
 
 def number_of_vacancies(df):
-    false_count = int(df['salary_None'].value_counts()[False])
+    false_count = int(df['salary_None'].value_counts()[True])
     b=int(len(df))
     list_vacancies = [b, false_count]
     return list_vacancies
+
+def average_value_salary_from_to(df):
+    df = df[df['salary_currency'] == 'RUR']
+    average_value1 = df['salary_from'].mean()
+    average_value2 = df['salary_to'].mean()
+    average_value = int((average_value1+average_value2)//2)
+    return average_value
