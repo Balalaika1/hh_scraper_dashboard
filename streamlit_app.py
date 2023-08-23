@@ -57,3 +57,6 @@ if df.empty == False:
                       )
 else:
     st.markdown('<h3>Select the data and click the refresh button 😉</h3>',unsafe_allow_html=True)
+
+st.set_page_config(page_title="HH Interactive Dashboard", page_icon="📊")
+
